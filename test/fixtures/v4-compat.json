@@ -1,0 +1,98 @@
+{
+  "generatedBy": {
+    "package": "@stellar/js-xdr",
+    "alias": "js-xdr-v4",
+    "version": "4.0.0",
+    "script": "test/fixtures/generate-v4-compat.cjs"
+  },
+  "cases": {
+    "compatRecord": {
+      "schema": "CompatRecord",
+      "hex": "fffffffffffffffffffffee08e04fb350000011f71fb04cb000000013fc00000c0020000000000000000000268690000010203000000000404050607000000010000000200000003000000020000000400000005000000010000000900000002",
+      "value": {
+        "i": -1,
+        "u": 4294967295,
+        "h": "-1234567890123",
+        "uh": "1234567890123",
+        "ok": true,
+        "f": 1.5,
+        "d": -2.25,
+        "name": "6869",
+        "fixed": "010203",
+        "varBytes": "04050607",
+        "fixedInts": [1, 2, 3],
+        "varInts": [4, 5],
+        "maybe": 9,
+        "color": 2
+      }
+    },
+    "resultOk": {
+      "schema": "Result",
+      "hex": "00000000",
+      "value": {
+        "type": 0
+      }
+    },
+    "resultError": {
+      "schema": "Result",
+      "hex": "00000001000000107468697320697320616e206572726f72",
+      "value": {
+        "type": 1,
+        "message": "7468697320697320616e206572726f72"
+      }
+    },
+    "linkedList": {
+      "schema": "IntList",
+      "hex": "00000003000000010000000100000000",
+      "value": {
+        "value": 3,
+        "rest": {
+          "value": 1,
+          "rest": null
+        }
+      }
+    },
+    "scene": {
+      "schema": "Scene",
+      "hex": "0000000464656d6f0000000462617365000000020000000000000001000000020000000100000002000000030000000400000005000000060000000100000001000000000000000700000008",
+      "value": {
+        "name": "64656d6f",
+        "root": {
+          "label": "62617365",
+          "shapes": [
+            {
+              "type": 0,
+              "center": {
+                "x": 1,
+                "y": 2
+              }
+            },
+            {
+              "type": 1,
+              "polygon": {
+                "vertices": [
+                  {
+                    "x": 3,
+                    "y": 4
+                  },
+                  {
+                    "x": 5,
+                    "y": 6
+                  }
+                ],
+                "closed": true
+              }
+            }
+          ]
+        },
+        "fallback": {
+          "type": 0,
+          "center": {
+            "x": 7,
+            "y": 8
+          }
+        }
+      }
+    }
+  }
+}
